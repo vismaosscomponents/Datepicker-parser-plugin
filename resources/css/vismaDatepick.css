@@ -1,0 +1,195 @@
+/**
+ * Custom styles for Datepicker and Datepicker-tooltip
+ * Laurentiu Ciucur laurentiu.ciucur@visma.com
+ * http://www.visma.com/
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl-2.0.html
+**/
+
+ div.datepick-popup{
+     z-index: 79;
+}
+input[type="text"].hasDatepick {
+	background: #FFF url(../images/datepick_trigger.png) no-repeat right top;
+	border-color:#999;
+	border-style: solid;
+	border-width: 1px !important;
+	height:14px;
+	padding:1px 18px 1px 1px;
+	position: relative;
+	vertical-align:top;
+	width: 77px;
+}
+input[type="text"].hasDatepick.vismaDateTriggerHover{
+	background-position: right -16px;
+}
+input[type="text"].hasDatepick.vismaDateTriggerActive{
+	background-position: right -32px;
+}
+input[type="text"].hasDatepick:focus{
+	background-position: right -16px;
+	border: 1px solid #5CB9EA;
+}
+input[type="text"].hasDatepick:active{
+	background-position: right -16px;
+}
+input[type="button"].datepick-trigger {
+	background: url(#) repeat 0 0;
+	border: none;
+	display: inline;
+	height: 16px;
+	right: 19px;
+	margin:0;
+	position: relative;
+	padding: 0;
+	width: 18px;
+}
+input[type="button"].datepick-trigger:hover {
+	background: url(#) repeat 0 0;
+	border: none;
+}
+div.vismaDatePicker {
+	background-color: #FFF;
+	border: 1px solid #dfdfdf;
+	color: #000;
+	clear: none;
+	float: none;
+	font-size: 1em;
+	padding: 0;
+	width: 184px !important;
+	-moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+	z-index: 89;
+}
+
+/* Header Elements */
+
+.vismaDatePicker .vismaDatePickerHeader {
+	background: url(../images/datepick_header_slice.png) repeat-x scroll left top;
+	height: 19px;
+	padding: 3px 0 0 0;
+	position: relative;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+.vismaDatePicker a.vismaDatePickerCmd {
+	background: url(../images/datepick_arrows.png) no-repeat;
+	display: inline-block;
+	height:18px;
+	padding: 0;
+	width:18px;
+}
+.vismaDatePicker a.vismaDatePickerCmd-prev {
+	background-position: 0 -18px;
+	position: relative;
+	right: 2px;
+}
+.vismaDatePicker a.vismaDatePickerCmd-next {
+	background-position: 0 0;
+	position: relative;
+	left: 2px;
+}
+.vismaDatePicker div.vismaDatePickerCalendar{
+	background: #eaeaea url(../images/datepick_calendar_slice.png) repeat-x 0 0;
+	padding: 8px 6px 0 2px;
+}
+.vismaDatePicker .vismaDatePickerHeader select {
+	background: transparent none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+.vismaDatePicker .vismaDatePickerHeader select:active, .vismaDatePicker .vismaDatePickerHeader select:focus{
+	border: 1px solid #9fc5ed;
+	outline: 1px solid #377fcd;
+}
+/* Calendar Elements */
+
+.vismaDatePicker table.vismaDatePickerCalendar {
+	border-collapse: collapse;
+	font-size: 1em;
+	margin:0;
+	text-align: right;
+	width: 100%;
+}
+.vismaDatePicker table.vismaDatePickerCalendar thead th{
+	color: #1e1e1e;
+	font-size: .9em;
+	padding: 0 0 5px 0;
+	text-shadow: 0 1px 0 #fff;
+}
+.vismaDatePicker table.vismaDatePickerCalendar thead th span{
+	display: block;
+	width: 18px;
+	font-weight: normal;
+}
+.vismaDatePicker table.vismaDatePickerCalendar tbody td{
+	font-size: 1.1em;
+	padding: 0;
+	vertical-align:bottom;
+}
+.vismaDatePicker table.vismaDatePickerCalendar tbody td a, .vismaDatePicker table.vismaDatePickerCalendar tbody td span{
+	color: #202020;
+	display: block;
+	height: 18px;
+	padding: 1px 3px 3px 1px;
+	text-shadow: 0 1px 0 #fff;
+	width: 16px;
+}
+.vismaDatePicker table.vismaDatePickerCalendar tbody td a.vismaDatePickerOtherMonth {
+	color: #999999;
+	text-shadow: 0 1px 0 #fff;
+}
+.vismaDatePicker table.vismaDatePickerCalendar tbody td a:hover{
+	background: url(../images/datepick_calendar_hover.png) no-repeat 0 0;
+	color: #0877c9;
+	text-shadow: none;
+}
+.vismaDatePicker table.vismaDatePickerCalendar tbody td a.vismaDatePickerHighlight{
+	color: #4f82c7;
+	font-weight: bold;
+}
+.vismaDatePicker table.vismaDatePickerCalendar tbody td a.vismaDatePickerActive{
+	background: url(../images/datepick_calendar_active.png) no-repeat 0 0;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: none;
+	padding: 1px 2px 3px;
+}
+.vismaDatePicker table.vismaDatePickerCalendar .vismaDatePickerWeek span{
+	color: #808080;
+	font-size: 0.8em;
+	text-shadow: 0 1px 0 #fff;
+}
+
+/* Footer elements */
+
+.vismaDatePicker .vismaDatePickerFooter {
+	text-align: center;
+}
+.vismaDatePicker .vismaDatePickerFooter a.vismaDatePickerCmd-today{
+	background: none;
+	color: #4f82c7;
+	font-weight: bold;
+	margin: 0 auto;
+	text-shadow: 0 1px 0 #fff;
+	width: auto;
+}
+.dateToolTip {
+	background-color: #FFF;
+	border: 1px solid #5CB9EA;
+	border-top: none;
+	width:96px;
+	z-index:80;
+	display: block;
+	position: absolute;
+	margin: 0;
+}
+.dateToolTip:hover {
+	background-color: #ADCEEF;
+	cursor: pointer;
+}

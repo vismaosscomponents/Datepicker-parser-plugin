@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>HCI Playground - Date tooltip</title>
+        <link href="resources/css/layout.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/vismaDatepick.css" rel="stylesheet" type="text/css"/>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="resources/js/plugins/jquery.depends.js"></script>
+        <script type="text/javascript" src="resources/js/utils/chooseLanguage.js"></script>
+
+        <script type="text/javascript" src="resources/js/jquery.datepick.js"></script>
+        <script type="text/javascript" src="resources/js/jquery.datepick.ext.visma.js"></script>
+        <script type="text/javascript" src="resources/js/dateToolTip.js"></script>
+        <!--these 2 files should be included according to you locale, I'm using jquery.depends.js plugin to load them dynamic, see chooseLamguage.js in utils folder-->
+        <!-- <script type="text/javascript" src="resources/js/i18n/date-en-GB.js"></script>-->
+        <!-- <script type="text/javascript" src="resources/js/i18n/jquery.datepick-en-GB.js"></script>-->
+    </head>
+    <body>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                var datepickDefaults = {
+                    showOnFocus:false,
+                    showTrigger: '<input type="button"></input>',
+                    renderer: $.datepick.vismaThemeRenderer,
+                    showOtherMonths: true,
+                    selectOtherMonths: true,
+                    prevText: '',
+                    nextText: '',
+                    yearRange: 'c-5:c+5',
+                    constrainInput:false,
+                    dateFormat:'dd/mm/yyyy',
+                    showSpeed: 100
+                };
+                jQuery(".date").datepick(datepickDefaults);
+                jQuery(".date").datepick('dateToolTip');
+                jQuery(".date1").datepick(datepickDefaults);
+            });
+        </script>
+
+        <h1>Date tooltip</h1>
+        <h2>v2.0</h2>
+        <div class="languageSelector">
+            <input type="radio" id="en-GB" name="language" dateFormat="dd/mm/yyyy"/>
+            <label for="en-GB">English (en-GB)</label><br />
+            <input type="radio" id="no-NO" name="language" dateFormat="dd.mm.yyyy"/>
+            <label for="no-NO">Norwegian, Nynorsk (no-NO)</label><br />
+            <input type="radio" id="nb-NO" name="language" dateFormat="dd.mm.yyyy"/>
+            <label for="nb-NO">Norwegian, Bokmål (nb-NO)</label><br />
+            <input type="radio" id="sv-SE" name="language" dateFormat="yyyy-mm-dd"/>
+            <label for="sv-SE">Swedish (sv-SE)</label><br />
+            <input type="radio" id="fi-FI" name="language" dateFormat="d.m.yyyy"/>
+            <label for="fi-FI">Finnish (fi-FI)</label><br />
+            <input type="radio" id="ro-RO" name="language" dateFormat="dd.mm.yyyy"/>
+            <label for="ro-RO">Romanian (ro-RO)</label><br />
+        </div>
+        <br />
+        <input type="text" class="date" id="1"/>
+        <div class="suggestions">Here's a few suggestions to try:
+            <p>today, tomorrow, July 2008, next friday, last April, 2004.08.07, 6/4/2005, 1d, +3we, +5years</p>
+        </div>
+        <h2>Inline date picker</h2>
+        <div class="date1" id="2"/>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+body{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    font-style: normal;
+    line-height: 1.6em;
+    margin: 20px;
+}
+
+div, h1, h2, h3, h4, h5, h6, form, input, textarea, p {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+a.btn {
+    background: url(../images/grid/button_right.png) no-repeat scroll top right;
+    color: #202020;
+    display: block;
+    float: left;
+    font-weight: normal;
+    height: 22px;
+    margin: 0.5em 0.5em 0.5em 0;
+    padding-right: 10px;
+    width: auto;
+    white-space: nowrap;}
+a.btn span {
+    background: url(../images/grid/button_left.png) no-repeat scroll top left;
+    display: block;
+    font-weight: normal;
+    line-height: 12px;
+    padding: 4px 0 6px 9px;}
+a.btn:hover {
+    background-position: right -22px;
+    color: #202020;
+    text-decoration: none;}
+a.btn:active {
+    background-position: right -44px;
+    color: #FFFFFF;
+    text-decoration: none;}
+a.btn:hover span {
+    background-position: left -22px;}
+a.btn:active span {
+    background-position: left -44px;}
+input[type="text"], select, textarea {
+    border: 1px solid #999;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:1em;
+}
+input[type="text"]:focus, textarea:focus {
+    border: 1px solid #5CB9EA;}
+
+.suggestions {
+	padding-bottom: 160px;
+}
+.languageSelector{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
