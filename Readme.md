@@ -1,7 +1,7 @@
 #Datepicker-parser-plugin
 A plugin that glues together jQuery Datepicker ([Keith Wood jQuery Datepicker](http://keith-wood.name/datepick.html)) and [Datejs](http://www.datejs.com/)  to create a super cool date-picker widget.
 
-Demo page: [http://hci.mcr.ro/Datepick-demo/](http://hci.mcr.ro/Datepick-demo/)
+Demo page: [http://osi.visma.com/cc/Datepick-demo/index.html](http://osi.visma.com/cc/Datepick-demo/index.html)
 
 ## Installation
 
